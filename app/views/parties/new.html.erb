@@ -1,0 +1,38 @@
+<h1>Add a Party</h1>
+
+<%= flash.notice %>
+
+<%= form_for(@party) do |f| %>
+  <label>Hosted By</label>
+  <p><%= f.text_field(:host_name) %></p>
+
+  <label>Host Email</label>
+  <p><%= f.text_field(:host_email) %></p>
+
+  <label>Number of Guests</label>
+  <p><%= f.text_field(:numgsts) %></p>
+
+  <label>Guest Names (separate by ',')</label>
+  <p><%= f.text_area(:guest_names) %></p>
+
+  <label>Venue Name</label>
+  <p><%= f.text_field(:venue) %></p>
+
+  <label>Venue Location</label>
+  <p><%= f.text_field(:location) %></p>
+
+  <label>Party Theme</label>
+  <p><%= f.text_field(:theme) %></p>
+
+  <label>Party Start Time</label>
+  <p><%= f.datetime_select(:start_time) %></p>
+
+  <label>Party End Time</label>
+  <p><%= f.datetime_select(:end_time) %></p>
+
+  <label>Description</label>
+  <p><%= f.text_area(:descript) %></p>
+
+  <p><%= f.submit %></p>
+<% end %>
+
